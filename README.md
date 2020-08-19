@@ -1,4 +1,4 @@
-# building_acoustics
+# building_acoustics建筑声学
 对中国的声学计算标准进行程序化，用于快速计算
 现在有标准：
 GB/T 3240-1982	采	声学测量中的常用频率
