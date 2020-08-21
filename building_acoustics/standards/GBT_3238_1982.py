@@ -36,13 +36,13 @@ def ssum(list=[]):
     print(m)
     for i in range(1,len(list)):
         n=n+m[i]
-    return  n
+    return  n.n
 
 #计算声压级列表平均值
 def saverage(list=[]):
     sum=ssum(list)
     average=10 * np.log10(sum.SPratio/len(list))
-    return '%.2fdB'%average
+    return average
 
 # m=[75.2 ,76.0 ,76.9 ,	75.8 ,	78.8 ,	78.4 ,	76.0 ,	76.6 ,	75.2 ,	75.2 ]
 # x=SPL(20)
