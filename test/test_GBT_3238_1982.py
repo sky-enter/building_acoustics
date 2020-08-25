@@ -1,3 +1,4 @@
+#从标准中导入GBT_3238_1982标准程序文件，减法未测试
 from building_acoustics.standards.GBT_3238_1982 import *
 
 #声压级计算
