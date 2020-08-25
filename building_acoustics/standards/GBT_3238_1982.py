@@ -36,7 +36,7 @@ def ssum(list=[]):
     print(m)
     for i in range(1,len(list)):
         n=n+m[i]
-    return  n,n.spL
+    return  n
 
 #计算声压级列表平均值
 def saverage(list=[]):
