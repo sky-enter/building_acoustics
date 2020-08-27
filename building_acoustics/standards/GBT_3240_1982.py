@@ -49,32 +49,40 @@ class frequency(object):
         return self.B
 
     def calculate_BF(self):
-        if -28 <= self.K < -20:
-            self.BF=round((self.F*100)/5)*0.05
-            if self.K == -21: self.BF = self.BF + 0.05
-            return self.BF
-        elif -20 <= self.K < -10:
-            self.BF = round((self.F * 10) / 5) * 0.5
-            if self.K == -11: self.BF = self.BF + 0.5
-            return self.BF
-        elif -10 <= self.K < 0:
-            self.BF = round((self.F) / 5) * 5
-            if self.K == -1: self.BF = self.BF + 5
-            return self.BF
-        elif 0 <= self.K < 10:
-            self.BF=round((self.F/10)/5)*50
-            if self.K == 9: self.BF = self.BF + 50
-            return self.BF
-        elif 10 <= self.K < 20:
-            self.BF=round((self.F/100)/5)*500
-            if self.K == 19: self.BF = self.BF + 500
-            return self.BF
-        elif 20 <= self.K <=22:
-            self.BF=round((self.F/1000)/5)*5000
-            return self.BF
-
-# x=frequency(f=250)
-# Z=x.K
-# print(x,Z)
-
+        if self.B==1/3:
+            if -28 <= self.K < -20:
+                self.BF=self.f_round(self.F*100)/100
+                return self.BF
+            elif -20 <= self.K < -10:
+                self.BF=self.f_round(self.F*10)/10
+                return self.BF
+            elif -10 <= self.K < 0:
+                self.BF = self.f_round(self.F)
+                return self.BF
+            elif 0 <= self.K < 10:
+                self.BF = self.f_round(self.F/10)*10
+                return self.BF
+            elif 10 <= self.K < 20:
+                self.BF = self.f_round(self.F/100)*100
+                return self.BF
+            elif 20 <= self.K <=22:
+                self.BF = self.f_round(self.F/1000)*1000
+                return self.BF
+        else:
+            if -7 < self.K <=-4:
+                self.BF = self.f_round(self.F*10)/10
+                return self.BF
+            elif  -3 <= self.K < 0:
+                self.BF = self.f_round(self.F)
+                return self.BF
+            elif 0 <= self.K < 4:
+                self.BF = self.f_round(self.F / 10) * 10
+                return self.BF
+            elif 4 <= self.K < 7:
+                self.BF = self.f_round(self.F / 100) * 100
+                return self.BF
+    def f_round(self,f):
+        BF = round(f / 5) * 5
+        if BF==795:BF=800
+        return BF  
 
